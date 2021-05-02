@@ -1,0 +1,25 @@
+{
+  "name": "weather-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardkentng/weather-js.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/richardkentng/weather-js/issues"
+  },
+  "homepage": "https://github.com/richardkentng/weather-js#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "weather-js": "^2.0.0"
+  }
+}
