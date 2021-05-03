@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+</head>
+<body class="container">
+    <form>
+        <label for="zip-city">Zipcode or City:</label>
+        <input id="zip-city" type="text" name="zipCity" autofocus>
+        <button type="submit" class="btn btn-primary">Go</button>
+    </form>
+    <% if (data) { %> 
+
+        <h1><%= data.location.name %> </h1>
+
+        <!-- Today's forecast -->
+        <% const today = data.forecast[1] %> 
+        <h2>Today: <%= today.day %> <%= today.date %> </h2>
+        <p>Range: <%= today.low %>&#730;- <%= today.high %>&#730;  </p>
+        
+        <!-- Tomorrow's forecast -->
+        <% const tomorrow = data.forecast[2] %> 
+        <h2>Tomorrow: <%= tomorrow.day %> <%= tomorrow.date %> </h2>
+        <p>Range: <%= tomorrow.low %>&#730;- <%= tomorrow.high %>&#730;  </p>
+        
+
+    <% } else if (data === undefined) { %>
+        <p style="color: red;">Error.  Please enter a valid zipcode or location.</p>
+    <% } %> 
+</body>
+</html>
